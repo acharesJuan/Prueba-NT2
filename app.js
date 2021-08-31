@@ -4,4 +4,5 @@ const filtrarProductos = (listaDeProductos,precio) =>  (listaDeProductos.forEach
     if (element <=precio) {
         listaDeProductosFinal.push(element)
     }
-})
+}))
+
