@@ -1,8 +1,13 @@
-let listaDeProductosFinal = []
+const listaDeProductos = [{nombre:"hamburguesa",precio:450},{nombre:"hamburguesa",precio:450},{nombre:"hamburguesa",precio:450}]
 
-const filtrarProductos = (listaDeProductos,precio) =>  (listaDeProductos.forEach(element => {
-    if (element <=precio) {
-        listaDeProductosFinal.push(element)
-    }
-}))
 
+function filtrarProductos(valor){
+    const productosFiltrados = listaDeProductos.filter(element => element.precio < valor)
+
+    productosFiltrados.forEach(producto => {
+        const elemento = document.createElement('p')
+        elemento.innerText = producto.nombre
+        document.getElementById("lista").appendChild(elemento)
+
+    })
+}
